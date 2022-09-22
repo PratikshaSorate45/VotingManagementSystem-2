@@ -1,0 +1,33 @@
+<!-- <app-navbar></app-navbar> -->
+
+<body>
+    <div class="container" id="main">
+    <h2>VoteList</h2>
+      <table class="table table-striped" style="width:100%">
+      <thead>
+        <tr>
+  
+          <th> Id</th>
+         <th>Voter Name</th>
+          <th>Party Name</th>
+          <!--<th>Actions</th>-->
+         
+          <tr></tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let v of vote| filter: nameSearch ">
+            <td>{{v.id }}</td>
+          <td>{{v.voterName }}</td>
+          <td>{{v.partyName }}</td>
+          
+          
+          
+          <!--<td><br><button class="btn btn-info"  type="button"(click)="voting()">Vote</button><br></td>-->
+               
+              
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </body>
